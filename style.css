@@ -78,6 +78,8 @@ span{
 }
 .home-content{
     max-width: 800px;
+    padding-left: 20px; /* Adds spacing from the left */
+    padding-right: 20px; /* Optional: Adds consistent spacing from the right */
     }
 .home-content h3{
     font-size: 42px;
@@ -381,3 +383,138 @@ iframe {
     font-size: 1.1rem;
     color: #555;
   }
+
+  @media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        gap: 2em;
+        padding: 20px 5%;
+    }
+
+    .about {
+        flex-direction: column;
+        gap: 2em;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-content h3 {
+        font-size: 28px;
+    }
+    .home-content h1 {
+        font-size: 36px;
+        line-height: 1.2;
+    }
+    .home-content p {
+        font-size: 16px;
+    }
+    .about-content h2 {
+        font-size: 32px;
+    }
+    .about-content h3 {
+        font-size: 48px;
+    }
+    .about-content p {
+        font-size: 16px;
+    }
+}
+
+.img-box img, 
+.about-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 20px 5%;
+    }
+
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .navbar a {
+        margin: 5px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-container, 
+    .tools-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+
+    .project-card, 
+    .tool-card {
+        max-width: 100%;
+        margin: auto;
+    }
+}
+
+body {
+    overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+    .footer ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer ul li {
+        margin: 10px 0;
+    }
+
+    .footer .social {
+        margin: 20px 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding-top: 100px; /* Compensate for a taller navbar in smaller screens if necessary */
+    }
+
+    .header {
+        padding: 20px 8%; /* Adjust padding to fit mobile screens */
+    }
+
+    .navbar a {
+        font-size: 16px; /* Smaller font size for better mobile fit */
+    }
+}
+
+/* Mobile-specific adjustments */
+@media screen and (max-width: 768px) {
+    .home {
+        flex-direction: column; /* Stack content vertically */
+        gap: 1em; /* Reduce spacing between elements */
+    }
+
+    .home-content {
+        text-align: center; /* Center-align text for better appearance */
+        padding: 20px; /* Uniform padding for all sides */
+    }
+
+    .home-content h1 {
+        font-size: 1.8rem; /* Adjust font size for smaller screens */
+    }
+
+    .home-content h3 {
+        font-size: 1.2rem; /* Adjust subtitle font size */
+    }
+
+    .img-box img {
+        width: 100%; /* Ensure the image scales with the screen width */
+        max-width: 300px; /* Optional: Limit max size for better scaling */
+    }
+}
